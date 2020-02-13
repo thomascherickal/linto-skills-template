@@ -1,0 +1,12 @@
+{
+  "en-US": {
+    "say": {
+      "additionResult" : "The addition result is "
+    }
+  },
+  "fr-FR": {
+    "say": {
+      "additionResult" : "Le résultat de l'addition est "
+    }
+  }
+}

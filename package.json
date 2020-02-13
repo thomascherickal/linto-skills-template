@@ -1,0 +1,25 @@
+{
+  "name": "@linto-ai/linto-skill-template",
+  "version": "0.0.1",
+  "description": "Template for a linto skill",
+  "author": "yhoupert@linagora.com",
+  "license": "AGPL-3.0-or-later",
+  "node-red": {
+    "nodes": {
+      "linto-skill-template": "linto-skill-template.js"
+    }
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "@linto-ai/linto-components": "^0.0.1"
+  },
+  "homepage": "https://linto.ai/",
+  "directories": {
+    "linto": "linto"
+  },
+  "keywords": [
+    "linto",
+    "node-red",
+    "example"
+  ]
+}
