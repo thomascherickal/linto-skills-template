@@ -1,0 +1,11 @@
+{
+  "linto-skill-template" : {
+    "label" :{
+      "name" : "Name",
+      "command": "Command"
+    },
+    "placeholder" : {
+      "name": "Node name"
+    }
+  }
+}
