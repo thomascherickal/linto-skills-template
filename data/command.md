@@ -1,8 +1,8 @@
 ##intent|template|en
-- an example command with entity[red](color)
-- an other example without entity
+- an example of command with entity [red](color)
 - one more example with entity [blue](color)
+- an other example without entity
 ##intent|template|fr
-- un example de commande avec une entité [rose](color)
-- un autre example avec une entité [rouge](color)
-- un dernier example sans entité
+- un exemple de commande avec une entité [rouge](color)
+- un autre exemple avec une entité [bleue](color)
+- un dernier exemple sans entité
