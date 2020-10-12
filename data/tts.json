@@ -1,12 +1,18 @@
 {
   "en-US": {
     "say": {
-      "additionResult" : "The addition result is "
+      "additionResult": {
+        "phonetic": "The addition result is ",
+        "text": "The addition result is "
+      }
     }
   },
   "fr-FR": {
     "say": {
-      "additionResult" : "Le résultat de l'addition est "
+      "additionResult": {
+        "phonetic": "Le résultat de l'addition ai ",
+        "text": "Le résultat de l'addition est "
+      }
     }
   }
 }

@@ -1,17 +1,17 @@
-<script type="text/x-red" data-template-name="linto-skill-template">
+<script type="text/x-red" data-template-name="linto-skill-demo">
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"/> <span data-i18n="linto-skill-template.label.name" /></label>
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
         <div style="display: inline-block; width:70%">
-            <input type="text" id="node-input-name" data-i18n="[placeholder]linto-skill-template.placeholder.name" />
+            <input type="text" id="node-input-name" placeholder="Name"/>
         </div>
     </div>
 
     <div class="form-row" style="margin-bottom: 0px;" >
         <label for="node-input-command" style="width: auto;">
-            <i class="fa fa-wrench"/>
-            <span data-i18n="linto-skill-template.label.command"/>
-            <span style="color:RED; font-weight: bold;" id="node-input-command-custom" data-i18n="linto-skill-template.label.custom"/>
-            <span style="color:GREEN; font-weight: bold;" id="node-input-command-default" data-i18n="linto-skill-template.label.default"/>
+            <i class="fa fa-wrench"></i> 
+            <span>Command</span>
+            <span style="color:RED; font-weight: bold;" id="node-input-command-custom">Custom</span>
+            <span style="color:GREEN; font-weight: bold;" id="node-input-command-default">Default</span>
         </label>
         <input type="hidden" id="node-input-command" autofocus="autofocus" />
     </div>
@@ -22,23 +22,22 @@
 </script>
 
 <script type="text/javascript">
-    const skillSettings = RED.settings.lintoSkillTemplate
-
-    RED.nodes.registerType(skillSettings.skillName, {
+    RED.nodes.registerType('linto-skill-demo', {
         defaults: {
             name: {
                 value: ""
             },
             command: {
-                value: skillSettings.command
+                value: RED.settings.lintoSkillDemo.command
             }
         },
-      ...skillSettings.htmlTemplate,
-      label: function () {
-          return this.name || skillSettings.skillName
-      },
-      oneditprepare: function () {
-            if ($("#node-input-command").val() === skillSettings.command) {
+        ...RED.settings.lintoSkillDemo.template,
+
+        label: function () {
+            return this.name || "linto-skill-demo"
+        },
+        oneditprepare: function () {
+            if ($("#node-input-command").val() === RED.settings.lintoSkillDemo.command) {
                 $("#node-input-command-custom").hide()
                 $("#node-input-command-default").show()
             } else {
@@ -125,5 +124,5 @@
             $(".node-text-editor").css("height", height + "px");
             this.editor.resize();
         }
-  })
+    })
 </script>
